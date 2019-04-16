@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //Користувач вводить номер пункту меню і на екрані з’являється відповідне зображення смайла. 
+   var a = parseInt(prompt('1. Веселий 2. Сумний 3. Обурений'));
+    if(a==1)
+    document.write('<img src="https://previews.123rf.com/images/nezezon/nezezon1505/nezezon150500032/40540459-modern-yellow-laughing-happy-smile.jpg"/>')
+    else
+    {
+    if(a==2)
+        document.write('<img src="https://images-na.ssl-images-amazon.com/images/I/71UnEwJAf%2BL._SX425_.jpg"/>');
+        else 
+        document.write('<img src="http://clipart-library.com/images/gTe5GdKac.png"/>')
+    }
+    
+       
+    
+    </script>
+    <hr>
+    <script>
+        
+    //Комп’ютер загадує число від 1 до 5. Дати можливість користувачу за 2 спроби вгадати загадане комп’ютером число.
+    var numberr = Math.floor(Math.random()*5+1)
+    document.write('Число:'+numberr)
+    var attempt1=parseInt(prompt('1 спроба вгадати число: '));
+    var attempt2=parseInt(prompt('2 спроба вгадати число: '));
+    if (attempt1==numberr || attempt2==numberr)
+    document.write('; ви вгадали!');
+    else document.write('; Спробуйте ще раз');
+    
+    </script>
+    <hr>
+    
+    <script>
+        //Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10.
+    var nmr1 = Math.floor(Math.random()*50+1);
+    var nmr2 = Math.floor(Math.random()*50+50);
+    document.write('Проміжок від '+nmr1+' до '+nmr2)
+    
+    var try1 = parseInt(prompt('Введіть число від 1 до 100: '));
+    if (try1 >= nmr1 && try1 <= nmr2)
+    document.write('; Ви ввели число: '+try1+'. Ви перемогли!');
+    else
+    
+     { 
+        if (try1>=nmr1-10 && try1<=nmr2+10)
+        document.write('; Ви ввели число: '+try1+'. Ви перемогли!');
+        else
+    document.write('; Ви ввели число: '+try1+'. Ви програли.')
+    } 
+    </script>
+    <hr>
+    <script>
+    //Комп’ютер загадує число від 1 до 10. Двоє користувачів надають свої відповіді. Виграє той, у кого число знаходиться ближче до загаданого комп’ютером числа.
+    var numberrr = Math.floor(Math.random()*10+1);
+    var attempt11=parseInt(prompt('Гравець 1, введіть число від 1 до 10: '));
+    var attempt22=parseInt(prompt('Гравець 2, введіть число від 1 до 10: '));
+    document.write('Загадане число: '+numberrr+' - ')
+    var di1=Math.abs(attempt11-numberrr);
+    var di2=Math.abs(attempt22-numberrr);
+    if (di1<di2 && di1>0 && di1<10 && di2>0 && di2<10)
+
+    document.write('Гравець 1 переміг!');
+
+    else {
+
+    if (di1>di2 && di1>0 && di1<10 && di2>0 && di2<10)
+    document.write('Гравець 2 переміг!');
+    else
+    document.write('Ви порушили умови гри.');
+    }
+    
+    </script>
+<hr>
+<script>
+//Морський бій. Ворожий корабель, може знаходитись в одному із квадратів (кількість квадратів вводиться з клавіатури), які розташовані лінійно (один за одним) на річці. 
+//Позиція корабля визначається комп’ютером випадковим чином.
+//Гра відбувається за правилами: 
+//1) якщо користувач стріляє у заданий квадрат (тобто вводиться номер квадрата), то корабель потоплено;
+//2) якщо корабель знаходиться у сусідньому по відношенню до квадрата, де знаходиться корабель, то корабель пошкоджено (про це повідомляємо користувача).
+//За два постріли спробувати потопити корабель. */
+ var ships = parseInt(prompt('Введіть кількість квадратів: '));
+var ship = Math.floor(Math.random()*ships+1);
+var shot1= parseInt(prompt('Квадратів є '+ships+'. Введіть номер квадрата.'));
+var shot2= parseInt(prompt('Квадратів є '+ships+'. Другий хід.'));
+document.write('Корабель знаходився у квадраті '+ship+'; ')
+if (ship==shot1 || ship==shot2)
+document.write('Корабель потоплено, вітаємо з перемогою!');
+else {
+    if (shot1+1==ship || shot1-1==ship || shot2+1==ship || shot2-1==ship)
+    document.write('Ви пошкодили корабель. Продовжуйте грати.')
+    else 
+    document.write('Ви програли')
+}
+</script>
+<hr>
+<script>
+//Модифікувати попередню задачу з можливістю після пострілу переміщення корабля у випадковим чином вибрану сусідню клітинку (якщо звичайно корабель не було потоплено за першим разом).
+ var ships1 = parseInt(prompt('Введіть кількість квадратів: '));
+var ship1 = Math.floor(Math.random()*ships1+1);
+var shot11= parseInt(prompt('Квадратів є '+ships1+'. Введіть номер квадрата.'));
+document.write('Спочатку корабель знаходився у квадраті '+ship1+'; ')
+
+if (ship1==shot11)
+
+
+document.write('Корабель потоплено, вітаємо з перемогою!');
+
+else { 
+   var ship11 = Math.floor(Math.random()*ships1-1+2)
+   var shot22= parseInt(prompt('Квадратів є '+ships1+'. Другий хід.'));
+   document.write('Потім корабель знаходився у квадраті '+ship11+'; ')
+   if (ship11==shot22)
+document.write('Корабель потоплено, вітаємо з перемогою!');
+else{
+    if (shot22+1==ship11 || shot22-1==ship11)
+    document.write('Ви пошкодили корабель. Продовжуйте грати.')
+    else 
+    document.write('Ви програли')
+    }
+
+}
+
+</script>
+<hr>
+<script>
+//Модифікувати попередню задачу таким чином, що кораблем керує користувач, а комп’ютер стріляє
+var a = parseInt(prompt('Введіть положення корабля'))
+var b = Math.floor(Math.random()*50+1);
+document.write('Компютер стріляв у '+b+' квадрат; ')
+
+if (a==b)
+
+document.write('Корабель потоплено, ви програли');
+
+else { 
+   var c = parseInt(prompt('Введіть нове положення корабля: '));
+   var d = Math.floor(Math.random()*50+1);
+   document.write('Потім компютер стріляв у квадрат '+d+'; ')
+   if (c==d)
+document.write('Корабель потоплено, ви програли');
+else{
+
+    if (d+1==c || d-1==c)
+    document.write('Ваш корабель пошкоджено. Продовжуйте грати.')
+    else 
+    document.write('Ви перемогли!')
+}
+}
+</script>
+<hr>
+<script>
+  var player1 = Math.floor(Math.random()*12+1);
+  var new1
+   if (player1 == 2|| player1 == 4 || player1 == 6 || player1 == 8 || player1 == 10 || player1 == 12)
+   {
+  new1=player1+10
+  alert('Гравцю 1 випало '+player1+'; Ви отримуєте '+new1+' балів.')
+   }
+   else {
+   new1=10-player1
+  alert('Гравцю 1 випало '+player1+'; Ви отримуєте '+new1+' балів.')
+   }
+  var player2 = Math.floor(Math.random()*12+1);
+  var new2
+   if (player2 == 2|| player2 == 4 || player2 == 6 || player2 == 8 || player2 == 10 || player2 == 12)
+   {
+  new2=player2+10
+  alert('Гравцю 2 випало '+player2+'; Ви отримуєте '+new2+' балів.')
+   }
+   else{
+   new2=10-player2
+  alert('Гравцю 2 випало '+player2+'; Ви отримуєте '+new2+' балів.')
+   }
+   if (!confirm('Гравець 1, ще один хід?')) 
+  { var new3
+  new3=0
+   alert('У першого гравця '+new1+' балів');
+  }
+else {
+var player3 = Math.floor(Math.random()*12+1);
+   if (player3 == 2|| player3 == 4 || player3 == 6 || player3 == 8 || player3 == 10 || player3 == 12)
+   {
+  new3=player3+10
+  alert('Гравцю 1 випало '+player3+'; Ви отримуєте '+new3+' балів.')
+   }
+   else {
+   new3=10-player3
+  alert('Гравцю 1 випало '+player3+'; Ви отримуєте '+new3+' балів.')
+   }
+}
+if (!confirm('Гравець 2, ще один хід?')) 
+  { var new4
+  new4=0
+       alert('У другого гравця '+new2+' балів');
+  }
+else {
+var player4 = Math.floor(Math.random()*12+1);
+  var new4
+   if (player4 == 2|| player4 == 4 || player4 == 6 || player4 == 8 || player4 == 10 || player4 == 12)
+   {
+  new4=player4+10
+  alert('Гравцю 2 випало '+player4+'; Ви отримуєте '+new4+' балів.')
+   }
+   else {
+   new4=10-player3
+  alert('Гравцю 2 випало '+player4+'; Ви отримуєте '+new4+' балів.')
+   }
+}
+var res = new1+new3
+var res1 = new2+new4
+var contestant
+if (res>res1)
+contestant=1
+else 
+contestant=2
+document.write('У першого гравця: '+res+' балів. У другого гравця: '+res1+' балів. Переміг '+contestant+' гравець.')
+</script>
+</body>
+</html> 
