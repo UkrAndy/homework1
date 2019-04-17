@@ -62,7 +62,7 @@
     //Комп’ютер загадує число від 1 до 10. Двоє користувачів надають свої відповіді. Виграє той, у кого число знаходиться ближче до загаданого комп’ютером числа.
     var numberrr = Math.floor(Math.random()*10+1);
     var attempt11=parseInt(prompt('Гравець 1, введіть число від 1 до 10: '));
-    var attempt22=parseInt(prompt('Гравець 2, введіть число від 1 до 10: '));
+    var attempt22=parseInt(prompt('Гравець 2, введіть число від 1 до 10: '));  Другу спробу треба робити тільки коли не вгадав в перший раз
     document.write('Загадане число: '+numberrr+' - ')
     var di1=Math.abs(attempt11-numberrr);
     var di2=Math.abs(attempt22-numberrr);
@@ -90,7 +90,7 @@
  var ships = parseInt(prompt('Введіть кількість квадратів: '));
 var ship = Math.floor(Math.random()*ships+1);
 var shot1= parseInt(prompt('Квадратів є '+ships+'. Введіть номер квадрата.'));
-var shot2= parseInt(prompt('Квадратів є '+ships+'. Другий хід.'));
+var shot2= parseInt(prompt('Квадратів є '+ships+'. Другий хід.'));    Аналогічно, другий хід треба робити тільки після первірки першого ходу
 document.write('Корабель знаходився у квадраті '+ship+'; ')
 if (ship==shot1 || ship==shot2)
 document.write('Корабель потоплено, вітаємо з перемогою!');
