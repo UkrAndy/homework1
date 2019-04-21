@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    //Найбільше серед двох різних замінити на 0.
+    var a = parseInt(prompt('Введіть перше число'))
+    var b = parseInt(prompt('Введіть друге число'))
+    max= a>b ? a==0 : b==0;
+
+    </script>
+    <hr>
+    <script>
+    //Найбільше серед двох замінити на 0. Якщо однакові, то замінити обидва на 1.
+    var aa = parseInt(prompt('Введіть перше число'))
+    var bb = parseInt(prompt('Введіть друге число'))
+    max= aa>bb ? aa==0 : bb==0;
+    if (aa==bb)
+    aa==1 && bb==1
+    </script>
+    <hr>
+    <script>
+        /*Задача 1. З клавіатури вводиться рівень доступу. Вивести на екран текстове представлення.
+1.Аднміністратор
+2.Менеджер
+3.Редактор
+4.Користувач */
+
+        var admin = parseInt(prompt('Введіть рівень доступу:\n1.Адміністратор\n2.Менеджер\n3.Редактор\n4.Користувач'))
+        switch (admin) {
+            case 1: document.write('Вітаємо, адміністратор')
+
+                break;
+            case 2: document.write('Вітаємо, менеджер')
+
+                break;
+            case 3: document.write('Вітаємо, редактор')
+
+                break;
+            case 4: document.write('Вітаємо, користувач')
+
+                break;
+
+            default: document.write('Введіть число від 1 до 4')
+                break;
+        }
+    </script>
+    <hr>
+    <script>
+        //Задача 1.1. Змінити попереднє завдання вивівши «працівник», якщо це перші 3 пункти.
+        var admin1 = parseInt(prompt('Введіть рівень доступу:\n1-3.Працівник\n4.Користувач'))
+        switch (admin1) {
+            case 1:
+            case 2:
+            case 3: document.write('Вітаємо, працівник')
+                break;
+            case 4: document.write('Вітаємо, користувач')
+
+                break;
+
+            default: document.write('Введіть число від 1 до 4')
+                break;
+        }
+    </script>
+    <hr>
+    <script>
+        //Задача 2. З клавіатури вводиться назва категорії водія. Вивести на екран назву транспортного засобу, яким він може керувати
+        var driver = prompt('Введіть назву категорії водія (наприклад:"А1")')
+        switch (driver) {
+            case 'A1': document.write('двоколісний транспорт (мопеди, моторолери та ін.) з робочим об’ємом двигуна до 50 куб. см, або електродвигуном із потужністю до 4 кВт;')
+
+                break;
+            case 'A': document.write('двоколісний транспорт (мотоцикли та ін.) з робочим об’ємом двигуна 50 куб. см і більше, або електродвигуном із потужністю 4 кВт і більше;')
+
+                break;
+            case 'B1': document.write('три- або чотирьохколісний транспорт (квадроцикли, трицикли, мотоцикли з причепом та ін.), масою до 400 кг;')
+
+                break;
+            case 'B': document.write('автомобілі масою до 3500 кг, і кількістю сидячих місць (не враховуючи водійського) до 8;')
+
+                break;
+            case 'C1': document.write('автомобілі масою від 3500 до 7500 кг, призначені для перевезення вантажів;')
+
+                break;
+            case 'C': document.write(' автомобілі масою від 7500 кг, призначені для перевезення вантажів;')
+
+                break;
+            case 'D1': document.write('автобуси місткістю до 16 чоловік (без урахування водія), призначені для перевезення пасажирів;')
+
+                break;
+            case 'D': document.write('автобуси місткістю більше 16 чоловік (без урахування водія), призначені для перевезення пасажирів;')
+
+                break;
+            case 'T': document.write('тролейбуси та трамваї.')
+
+                break;
+
+            default: document.write('Введіть назву категорії водія відповідно до умови.')
+                break;
+        }
+    </script>
+    <hr>
+    <script>
+        //Задача 2. З клавіатури вводяться два числа. Вибравши номер операції обчислити результат.
+        var number1 = parseInt(prompt('Введіть перше число: '))
+        var number2 = parseInt(prompt('Введіть друге число: '))
+        var operation = parseInt(prompt('Виберіть дію:\n1.Додати\n2.Відняти\n3.Помножити\n4.Поділити'))
+        var res1 = number1 + number2
+        var res2 = number1 - number2
+        var res3 = number1 * number2
+        var res4 = number1 / number2
+        switch (operation) {
+            case 1: document.write('Результат операції: ' + res1)
+
+                break;
+            case 2: document.write('Результат операції: ' + res2)
+                break;
+            case 3: document.write('Результат операції: ' + res3)
+                break;
+            case 4: document.write('Результат операції: ' + res4)
+                break;
+
+            default: document.write('error')
+                break;
+        }
+    </script>
+    <hr>
+    <script>
+        //Задача 3. Модифікувати попереднє завдання ввівши не номер операції, а саму операцію.
+        var number11 = parseInt(prompt('Введіть перше число: '))
+        var number22 = parseInt(prompt('Введіть друге число: '))
+        var operation1 = prompt('Введіть дію: ')
+        var r = number11 + number22
+        var t = number11 - number22
+        var l = number11 * number22
+        var x = number11 / number22
+        switch (operation1) {
+            case '+': document.write('Результат операції: ' + r)
+
+                break;
+            case '-': document.write('Результат операції: ' + t)
+                break;
+            case '*': document.write('Результат операції: ' + l)
+                break;
+            case '/': document.write('Результат операції: ' + x)
+                break;
+
+            default: document.write('error')
+                break;
+        }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться кількість сторін багатокутника. Необхідно вивести назву фігури («трикутник», «чотирикутник», «п’ятикутинк», «шестикутник»).
+            var figure = parseInt(prompt('Введіть кількість сторін багатокутника: '))
+            switch (figure) {
+                case 3: document.write('Трикутник.')
+
+                    break;
+                case 4: document.write('Чотирикутник.')
+
+                    break;
+                case 5: document.write('П`ятикутник')
+
+                    break;
+                case 6: document.write('Шестикутник')
+
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться оцінка за екзамен  , як ціле число. Вивести на екран оцінку прописом (“відмінно”,“добре”,“задовільно”,“незадовільно”.
+            var note = parseInt(prompt('Введіть оцінку за екзамен як ціле число: '))
+            switch (note) {
+                case 1:
+
+                case 2: document.write('Незадовільно')
+
+                    break;
+                case 3: document.write('Задовільно')
+
+                    break;
+                case 4: document.write('Добре')
+
+                    break;
+                case 5: document.write('Відмінно')
+
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться номер місяця. Необхідно вивести кількість днів у цьому місяці.
+            var month = parseInt(prompt('Введіть номер місяця: '))
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: document.write('У даного місяця 31 день')
+
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11: document.write('У даного місяця 30 днів')
+                    break;
+                case 2: document.write('Це єдиний місяць із 28 днями')
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться символ, що є літерою українського алфавіту. Визначити, якою є ця літера: голосною чи приголосною.
+            var letter = prompt('Введіть літеру українського алфавіту: ')
+            switch (letter) {
+                case 'а':
+                case 'я':
+                case 'о':
+                case 'у':
+                case 'ю':
+                case 'є':
+                case 'е':
+                case 'и':
+                case 'і':
+                case 'ї': document.write('Це голосна літера')
+
+                    break;
+
+                default: document.write('Це приголосна літера')
+                    break;
+            }
+    </script>
+   
+    <hr>
+    <script>
+            var day = parseInt(prompt('Введіть номер дня тижня'))
+            switch (day) {
+                case 1: document.write('')
+
+                    break;
+                case 1: document.write('Понеділок')
+
+                    break;
+                case 2: document.write('Вівторок')
+
+                    break;
+                case 3: document.write('Середа')
+
+                    break;
+                case 4: document.write('Четвер')
+
+                    break;
+                case 5: document.write('П`ятниця')
+
+                    break;
+                case 6: document.write('Субота')
+
+                    break;
+                case 7: document.write('Неділя')
+
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться номер місяця. Вивести на екран назву місяця.
+            var monthh = parseInt(prompt('Введіть номер місяця: '))
+            switch (monthh) {
+                case 1: document.write('Січень')
+
+                    break;
+                case 2: document.write('Лютий')
+
+                    break;
+                case 3: document.write('Березень')
+
+                    break;
+                case 4: document.write('Квітень')
+
+                    break;
+                case 5: document.write('Травень')
+
+                    break;
+                case 6: document.write('Червень')
+
+                    break;
+                case 7: document.write('Липень')
+
+                    break;
+                case 8: document.write('Серпень')
+
+                    break;
+                case 9: document.write('Вересень')
+
+                    break;
+                case 10: document.write('Жовтень')
+
+                    break;
+                case 11: document.write('Листопад')
+
+                    break;
+                case 12: document.write('Грудень')
+
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться номер місяця. Необхідно вивести на екран до якої пори року відноситься місяць
+            var month12 = parseInt(prompt('Введіть номер місяця: '))
+            switch (month12) {
+                case 12:
+                case 1:
+                case 2: document.write('Зима')
+                    break;
+                case 3:
+                case 4:
+                case 5: document.write('Весна')
+                    break;
+                case 6:
+                case 7:
+                case 8: document.write('Літо')
+                    break;
+                case 9:
+                case 10:
+                case 11: document.write('Осінь')
+                    break;
+                default: document.write('error')
+                    break;
+
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться номер дня тижня. Вивести на екран є цей день робочим чи вихідним.
+            var dotw = parseInt(prompt('Введіть номер дня тижня: '))
+            switch (dotw) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5: document.write('Це - робочий день')
+                    break;
+                case 6:
+                case 7: document.write('Це - вихідний')
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+            //З клавіатури вводиться позначення категорії («А», «В», «С») , яку вказано у водійському посвідченні. Вивести на екран транспортний засіб, яким може керувати водій.
+            var cardriver = prompt('Введіть позначення категорії («А», «В», «С»)')
+            switch (cardriver) {
+                case "A": document.write('Ви можете керувати двоколісним транспортом (мотоцикли та ін.) з робочим об’ємом двигуна 50 куб. см і більше, або електродвигуном із потужністю 4 кВт і більше;')
+
+                    break;
+                case "B": document.write('Ви можете керувати автомобілем масою до 3500 кг, і кількістю сидячих місць (не враховуючи водійського) до 8;')
+                    break;
+                case "C": document.write('Ви можете керувати автомобілем масою від 7500 кг, призначені для перевезення вантажів;')
+                    break;
+
+                default: document.write('error')
+                    break;
+            }
+    </script>
+    <hr>
+    <script>
+                //З клавіатури вводиться перша літера розширення файлу («html», «doc», «jpeg», «mp3», «xls»). Вивести на екран назву програми, яка може відкрити цей тип файлу.
+                var kindoffile = prompt('Введіть першу літеру розширення файлу («html», «doc», «jpeg», «mp3», «xls»).')
+                switch (kindoffile) {
+                    case 'h': document.write('Даний файл можна відкрити за допомогою текстового редактора або веб-браузера')
+
+                        break;
+                    case 'd': document.write('Даний файл можна відкрити за допомогою текстового редактора (Microsoft Office Word; LibreOffice та інші)')
+
+                        break;
+                    case 'j': document.write('Даний файл можна відкрити  за допомогою ACDSee, Adobe Protoshop, FastStone Image Viewer та інших програмах для роботи з графічними зображенями')
+
+                        break;
+                    case 'm': document.write('Найбільш популярним програмним забезпеченням для даного формату є програма VSO Downloader Ultimate (для ОС Windows) і програма Apple iTunes (для ОС Mac) - дані програми гарантовано відкривають ці файли.')
+
+                        break;
+                    case 'x': document.write('Для роботи з таблицями XLS використовуються офісні додатки від різних розробників. Також, для перегляду (але не для редагування) XLS таблиць можна використовувати Universal Viewer')
+
+                        break;
+
+                    default: document.write('Це - інше розширення файла')
+                        break;
+                }
+    </script>
+</body>
+
+</html>
