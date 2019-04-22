@@ -34,7 +34,7 @@
     var attempt2=parseInt(prompt('2 спроба вгадати число: '));
     if (attempt1==numberr || attempt2==numberr)
     document.write('; ви вгадали!');
-    else document.write('; Спробуйте ще раз');
+    else document.write('; Спробуйте ще раз');    Тут треба було вводити ще раз
     
     </script>
     <hr>
@@ -42,7 +42,7 @@
     <script>
         //Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10.
     var nmr1 = Math.floor(Math.random()*50+1);
-    var nmr2 = Math.floor(Math.random()*50+50);
+    var nmr2 = Math.floor(Math.random()*50+50);  
     document.write('Проміжок від '+nmr1+' до '+nmr2)
     
     var try1 = parseInt(prompt('Введіть число від 1 до 100: '));
@@ -66,7 +66,7 @@
     document.write('Загадане число: '+numberrr+' - ')
     var di1=Math.abs(attempt11-numberrr);
     var di2=Math.abs(attempt22-numberrr);
-    if (di1<di2 && di1>0 && di1<10 && di2>0 && di2<10)
+    if (di1<di2 && di1>0 && di1<10 && di2>0 && di2<10)  Тут достатньо було порівняти різниці: чия менша, тоай виграв
 
     document.write('Гравець 1 переміг!');
 
@@ -90,7 +90,7 @@
  var ships = parseInt(prompt('Введіть кількість квадратів: '));
 var ship = Math.floor(Math.random()*ships+1);
 var shot1= parseInt(prompt('Квадратів є '+ships+'. Введіть номер квадрата.'));
-var shot2= parseInt(prompt('Квадратів є '+ships+'. Другий хід.'));
+var shot2= parseInt(prompt('Квадратів є '+ships+'. Другий хід.'));   Другий раз вводимо тільки тоді, коли не потоплено за першим разом
 document.write('Корабель знаходився у квадраті '+ship+'; ')
 if (ship==shot1 || ship==shot2)
 document.write('Корабель потоплено, вітаємо з перемогою!');
