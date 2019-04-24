@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        //Використовуючи цикли вивести на екран 20 символів «о».
+        for (let i = 0; i < 20; i++) {
+            document.write('o')
+        }
+    </script>
+    <hr>
+    <script>
+        //Відобразити трикутник за допомогою символів «о»
+        //о
+        //оо
+        //ооо
+        //оооо
+        //ооооо
+        //оооооо
+        //ооооооо
+
+        let o_count = 1
+        for (let i = 0; i < 7; i++) {
+            for (let k = 0; k < o_count; k++) {
+                document.write('o')
+
+            }
+            o_count++
+            document.write('<br>')
+        }
+    </script>
+    <hr>
+    <p>
+        <script>
+
+            //Відобразити трикутник за допомогою символів «о»
+            // о
+            // оо
+            // ооо
+            // оооо
+            //  ооооо
+            // оооооо
+            // ооооооо
+
+            let oo_count = 1
+            for (let i = 0; i < 7; i++) {
+                for (let k = 0; k < oo_count; k++) {
+                    document.write('o')
+
+                }
+                oo_count++
+                document.write('<br>')
+
+            }
+
+        </script>
+    </p>
+    <hr>
+
+    <script>
+        // Відобразити трикутник за допомогою символів «о»
+        // оооооооооооо
+        // ооооооооооо
+        // оооооооооо
+        // ооооооооо
+        // оооооооо
+        // …
+        // оо
+        // о
+
+
+        let O_count = 12
+        for (let i = 0; i < 12; i++) {
+            for (let k = 0; k < O_count; k++) {
+                document.write('o')
+
+            }
+            O_count -= 1
+            document.write('<br>')
+
+        }
+    </script>
+    <hr>
+    <p>
+        <script>
+            // Відобразити трикутник за допомогою символів «о»
+            //  оооооооооооо
+            // ооооооооооо
+            //  оооооооооо
+            //  ооооооооо
+            //  оооооооо
+            //   …
+            //     оо
+            //     о
+
+            let Oo_count = 12
+            for (let i = 0; i < 12; i++) {
+                for (let k = 0; k < Oo_count; k++) {
+                    document.write('o')
+
+                }
+                Oo_count -= 1
+                document.write('<br>')
+
+            }
+        </script>
+    </p>
+    <hr>
+    <script>
+        //Побудувати ялинку
+        //о
+        //оо
+        //ооо
+        //оооо
+        //ооооо
+        //о
+        //оо
+        //ооо
+        //оооо
+        //ооооо
+        //о
+        //оо
+        //ооо
+        //оооо
+        //ооооо
+
+        let tree = 1
+        for (let y = 0; y < 3; y++) {
+
+
+            for (let k = 0; k < 5; k++) {
+
+                for (let i = 0; i < tree; i++) {
+                    document.write('o')
+
+                }
+
+                tree++
+                document.write('<br>')
+            }
+            tree = 1
+        }
+    </script>
+    <hr>
+    <script>
+        //5. Інвестор вклав   тис. грн.. на 20 років під 20% річних. Визначити за допомогою циклів суму, яку він одержить (без оподаткування).
+        let money = parseInt(prompt('Введіть суму: '))
+        let money1
+        for (let i = 0; i < 20; i++) {
+            money1 = money + money / 100 * 20
+            money = money1
+
+        }
+        document.write('Через 20 років ви отримаєте ' + Math.ceil(money1) + ' грн.')
+    </script>
+    <hr>
+    <script>
+        //Інвестор вклав   тис. грн.. на 20 років під 20% річних, податок складає 5% від суми прибутку. Визначити за допомогою циклів суму, яку він одержить.
+        let money11 = parseInt(prompt('Введіть суму: '))
+        let money2
+        let money22 = money11
+        for (let i = 0; i < 20; i++) {
+            money2 = money22 + money22 / 100 * 20
+            money22 = money2
+        }
+        let procent = (money22 - money11) / 100 * 5
+        money22 = money22 - procent
+
+
+        document.write('Через 20 років ви отримаєте ' + Math.ceil(money22) + ' грн.')
+    </script>
+    <hr>
+    <script>
+        // Інвестор вклав   тис. грн.. на 20 років під 20% річних а потім на 17 років під 27% річних. Визначити за допомогою циклів суму, яку він одержить.
+        let money3 = parseInt(prompt('Введіть суму: '))
+        let money31
+        for (let i = 0; i < 2; i++) {
+            money31 = money3 + money3 / 100 * 20
+            money3 = money31
+
+        }
+        for (let k = 0; k < 2; k++) {
+            money4 = money3 + money3 / 100 * 17
+            money3 = money4
+
+        }
+        document.write('Через 20 років ви отримаєте ' + Math.ceil(money4) + ' грн.')
+    </script>
+    <hr>
+
+    <script>
+        //Вивести на екран послідовність символів
+        //а о а о а о а о а о … Всього символів 82.
+        for (let i = 0; i < 41; i++) {
+            document.write('a o ')
+
+        }
+
+    </script>
+    <hr>
+    <script>
+        //Вивести на екран 
+        //1 1
+        //2 1 2
+        //3 1 2 3
+        //4 1 2 3 4
+        //…
+        //23 1 2 3 .. 22 23
+
+        var h = 1
+        let icount1 = 1
+        for (let k = 0; k < 23; k++) {
+
+
+            document.write(h + ' ')
+            h++
+            for (var i = 1; i <= icount1; i++) {
+
+                document.write(i + ' ');
+
+            }
+            icount1++
+            document.write('<br>')
+        }
+
+
+
+    </script>
+    <hr>
+    <script>
+        //тут у мене не вийшло щоб кожного разу цифр було  більше ніж попередньоого разу як в прогресії
+        //Вивести на екран 
+        //1 1
+        // 2 1234
+        // 3 123456789
+        // 4 1234…16
+        // 5 1 … 25
+        // 6 1…36
+
+
+        var h1 = 1
+        let icount11 = 1
+
+        for (let k = 0; k < 6; k++) {
+
+
+            document.write(h1 + ' ')
+            h1++
+            for (var j = 1; j <= icount11; j++) {
+
+                document.write(j + ' ');
+
+            }
+
+
+            icount11 = icount11 + 7
+
+
+
+            document.write('<br>')
+        }
+
+    </script>
+    <hr>
+
+    <script>
+        //Вивести на екран таблицю розмірністю 4*3 (4 рядки, 3 стовпці). У кожній клітинці вставити її порядковий номер.
+        document.write(`
+             <table border="2px">
+            
+                <tr>
+         `)
+
+
+
+        for (let i = 0; i < 3; i++) {
+            let dz = 1
+            document.write(`<td>${dz}</td>`)
+            dz++
+        }
+
+        document.write(`
+                 </tr> 
+         </table>
+         `)
+        document.write(`
+             <table border="2px">
+            
+                <tr>
+         `)
+
+
+
+        for (let i = 0; i < 3; i++) {
+            let dz = 2
+            document.write(`<td>${dz}</td>`)
+        }
+
+        document.write(`
+                 </tr> 
+         </table>
+         `)
+        document.write(`
+             <table border="2px">
+            
+                <tr>
+         `)
+
+
+
+        for (let i = 0; i < 3; i++) {
+            let dz = 3
+            document.write(`<td>${dz}</td>`)
+            dz++
+        }
+
+        document.write(`
+                 </tr> 
+         </table>
+         `)
+        document.write(`
+             <table border="2px">
+            
+                <tr>
+         `)
+
+
+
+        for (let i = 0; i < 3; i++) {
+            let dz = 4
+            document.write(`<td>${dz}</td>`)
+        }
+
+        document.write(`
+                 </tr> 
+         </table>
+         `)
+
+
+
+    </script>
+    <hr>
+    <script>
+        //. За допомогою циклів вивести на екран ненумерований список
+
+        document.write(`
+             <ul>
+            
+         `)
+        var numb = 1
+        for (let i = 0; i < 7; i++) {
+            document.write(`<li>Пункт ${numb}</li>`)
+            numb++
+        }
+        document.write(`
+                 
+         </ul> 
+         `)
+
+    </script>
+    <hr>
+
+    <script>
+        //Вивести на екран
+        //A B C D E
+        //B C D E F
+        //C D E F G
+        //D E F G H
+        //E F G H I
+
+        let start1Code = "A".charCodeAt(0)
+        for (let i = 0; i < 5; i++) {
+            for (let j = start1Code; j < start1Code + 5; j++) {
+                let symbol5 = String.fromCharCode(j);
+                document.write(symbol5, " ")
+
+
+
+            }
+            start1Code++
+            document.write("<br>")
+        }
+
+    </script>
+    <hr>
+    <script>
+        //З клавіатури вводяться числа до тих пір, поки послідовність є зростаючою або спадною.
+        var numberrr;
+        var numero
+        do {
+            numberrr = parseInt(prompt('number'));
+            numero = parseInt(prompt('number'));
+        }
+        while (numberrr != numero && numero > numberrr && numero != numberrr);
+
+    </script>
+    <hr>
+    <script>
+        //	Користувач вводить числа поки не натисне відміну. Знайти 
+
+        //1.	кількість парних;
+        //2.	добуток непарних;
+        //3.	суму двоцифрових;
+        //4.	середнє арифметичне додатних;
+        //5.	найбільше від’ємне;
+
+        var s = 0, k = 0, x = prompt('Введіть число', '');
+        var s1 = 0
+        var ser
+        var kl = 1
+        while (x != null) {
+            var p = x % 2
+            var nep = x % 2
+
+            if (p == 0) {
+                k++;
+            }
+            if (nep !== 0) {
+                s = s + (+x);
+            }
+            if (x < 100 && x > 9) {
+                s1 = s1 + (+x)
+
+            }
+            if (x > 0) {
+                kl++
+                ser = (s + (+x)) / kl
+
+            }
+            x = prompt('Введіть число', '');
+        }
+        document.write(k + '; ')
+        document.write(s + '; ')
+        document.write(s1 + '; ')
+        document.write(ser + '; ')
+        document.write(Math.min(x))
+    </script>
+    <hr>
+<script>
+for (let i = 1; i <=9; i++) {
+    for (let k = 0; k < 9; k++) {
+       
+        if (i>=k)
+        document.write(i,k, ' ')
+    }
+    
+}
+</script>
+<hr>
+<script>
+for (let g = 1; g < 10; g++) {
+   for (let r = 0; r < 10; r++) {
+       for (let uy = 0; uy < 10; uy++) {
+           if(g>=r+uy)
+           document.write(g,r,uy+' ')
+       }
+       
+   }
+    
+}
+</script>
+
+</body>
+
+</html>
