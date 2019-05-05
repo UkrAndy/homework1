@@ -25,14 +25,14 @@
     //2.З клавіатури вводитяться числа поки не буде введено 0. Знайти добуток чисел.
     
     var mult=1
-    var num1
+    var num=1
     
     do {
-       var mult1 = mult
-        num1 = parseInt(prompt('2.Введіть число:'))
-        mult = mult*num1
-    } while (num1!=0) 
-    document.write(mult1)
+       mult = mult*num                      Так буде краще
+       num = parseInt(prompt('2.Введіть число:'))
+        
+    } while (num!=0) 
+    document.write(mult)
     
     </script>
 
@@ -77,7 +77,7 @@
 var num4=parseInt(prompt('Введіть перше число:'))
    var num5=parseInt(prompt('Введіть друге число(більше ніж перше):'))
 do {
-   var num6=num4++
+   var num6=num4++                   Спробуйте зменшити кількість змінних
    var num7=num5--
    document.write(num6+'; '+num7+';'+'<br>')
 } while (num6<=num7);
@@ -156,10 +156,10 @@ do {
     //8. З клавіатури вводиться число. Знаходити суму цифр до тих пір. Поки сума не стане більшую за 20.
     
     var sum10=0;
-while(sum10<20)
+while(sum10<=20)
 {
     var num7=parseInt(prompt('Введіть число: '))
- sum10=sum10+num7
+    sum10+=num7
 }
     </script>
     <hr>
@@ -206,10 +206,10 @@ while(sum10<20)
         var try2 = parseInt(prompt('Введіть число: '))
         count1++
         if (try2==num9 || try2==num10) {
-            alert("Ви вгадали одне число, вгадуйте друге.")
+            alert("Ви вгадали одне число, вгадуйте друге.")  Тут треба фіксуват,и яке з чисел вгадано
         }
         
-    } while (try2!=num9 && try2!=num10);
+    } while (try2!=num9 && try2!=num10);    Ця умова ніколи не виконається (не може введен число одночасно дорівнювати двом різним)
     document.write('Ви ввели правильні числа, спроб: '+count1)
     </script>
     <hr>
@@ -217,7 +217,7 @@ while(sum10<20)
 //12. З клавіатури вводяться поступово числа. Знайти два найбільші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5.
 
 var chuslo1
-while ( chuslo1!=0)
+while ( chuslo1!=0)  Уважно прочитайте умову
  {
       chuslo1=parseInt(prompt('Введіть перше число: '))
     var chuslo2=parseInt(prompt('Bведіть друге число: '))
@@ -288,12 +288,12 @@ var tank = 1 + Math.floor(Math.random() * 10)
 var baly = 100
 do {
     var gunshot1 = parseInt(prompt('Введіть позицію пострілу: '))
-    var tanknew = tank + Math.floor(Math.random() * 1)
+    var tanknew = tank + Math.floor(Math.random() * 1)     Має бути від -1 до 1 Також треба перевірити чи не вийшов за поле
     tank=tanknew
 gunshots1--
 if (gunshot1==tank)
-baly=baly-30
-} while (baly>0 && gunshots1>0);
+baly=baly-30       Треба виводити інформацію про влучання
+} while (baly>0 && gunshots1>0);    
 if (gunshot1==tank) 
 document.write('Ви перемогли!')
 else 
@@ -318,8 +318,8 @@ document.write(yu)
 //Знайти серед послідовності чисел 1+1/2, 1+1/3,… перше число, яке менше заданого числа А.
 
 var qq=2
-var ee = prompt('A=:')
-var ww
+var ee = prompt('A=:')  Уважніше підходьте до іменування змінних
+var ww Якшр використовуєте var, то можна було описати і всередині блоку
 do {
     ww = 1+1/qq
     qq++
@@ -373,7 +373,7 @@ do {
     y1=Math.sin(x/4)
     y2=Math.cos(x/4)
     y3=Math.tan(x/4)
-    document.write('; sin='+y1+'; cos= '+y2+'; tg= '+y3)
+    document.write('; sin='+y1+'; cos= '+y2+'; tg= '+y3) Використовуйте шаблони
     x++
 
 } while (x!=3);
@@ -386,7 +386,7 @@ do {
 var t=parseInt(prompt('Введіть перше число: '))
 var t1=parseInt(prompt('Введіть друге число: '))
 var t2=0
-do {
+do {            Перечитайте умову, тут треба використати остачу від ділення "%" та ділення націло Math.floor
     var t22=t1*t2
     t2++
 var t3=t2-2
@@ -417,7 +417,7 @@ var tre=5
 document.write('2; 3; 5; 7; ')
 do {
     nch++
-    if (nch!=1 && nch%2!=0 && nch%3!=0 &&nch%7!=0 &&nch%5!=0) {
+    if (nch!=1 && nch%2!=0 && nch%3!=0 &&nch%7!=0 &&nch%5!=0) { Якби все так було просто ..., але з циклами ок
     document.write(nch+'; ')
     tre++
     
