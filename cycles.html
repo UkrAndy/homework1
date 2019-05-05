@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        //1. З клавіатури вводитяться числа поки не буде введено 0. Знайти суму чисел.
+        var sum = 0
+        do {
+            var num = parseInt(prompt('1.Введіть число:'))
+            sum = sum + num
+        } while (num != 0);
+        document.write(sum)
+        
+    </script>
+    <hr>
+    <script>
+    //2.З клавіатури вводитяться числа поки не буде введено 0. Знайти добуток чисел.
+    
+    var mult=1
+    var num1
+    
+    do {
+       var mult1 = mult
+        num1 = parseInt(prompt('2.Введіть число:'))
+        mult = mult*num1
+    } while (num1!=0) 
+    document.write(mult1)
+    
+    </script>
+
+    <hr>
+    <script>
+    //3. З клавіатури вводиться початкове знчення суми. Поки сума є меншою за 100 додавати до неї числа, які вводяться з клавіатури.
+    
+    var sum1=0
+    while (sum1<100)
+   
+     {
+        var num2=parseInt(prompt('Введіть число:'))
+        var sum1=sum1+num2
+    } 
+    document.write(sum1)
+    </script>
+    <hr>
+    <script>
+    //4. З клавіатури поступово вводяться числа. Знайти суму перших N (10) парних чисел.
+    
+    var count=0
+    var sum3=0
+    do {
+        var num3=parseInt(prompt('Введіть число:'))
+        if (num3%2==0) {
+            sum3=sum3+num3
+            count++
+        }
+    } while (count!=10);
+    document.write(sum3)
+    
+    </script>
+    <hr>
+    <script>
+    //4.1. З клавіатури вводяться два числа N i M (N<M). Вивести hа екран числа
+//N---M
+//N+1 --- M-1
+//N+2 --- M-2
+//N+3 --- M-3
+//Виведення завершити коли число справа стане меншим за число зліва.
+
+var num4=parseInt(prompt('Введіть перше число:'))
+   var num5=parseInt(prompt('Введіть друге число(більше ніж перше):'))
+do {
+   var num6=num4++
+   var num7=num5--
+   document.write(num6+'; '+num7+';'+'<br>')
+} while (num6<=num7);
+    
+    </script>
+    <hr>
+    <script>
+    //5. На екрані виводиться меню: 
+//1. Сказати «Привіт». 
+//2. Сказати «Зачекай». 
+//3. Сказати «До побачення». 
+//4. Вихід.
+//Шляхом вибору пунктів меню виводити відповідні повідомлення, поки не буде вибрано пункт номер 4.
+
+    do {
+        var menu=parseInt(prompt('1. Сказати «Привіт»; Сказати «Зачекай»; 3. Сказати «До побачення»; 4. Вихід.'))
+        switch (menu) {
+            case 1: document.write('Привіт!')
+                
+                break;
+                case 2: document.write('Зачекай.')
+                
+                break;
+                case 3: document.write('До побачення')
+                
+                break;
+        
+            default: 
+                break;
+        }
+    } while (menu!=4);
+    </script>
+    <hr>
+    <script>
+    //6. На екрані виводиться меню:
+	//1.Ініціалізація (сума=0)
+	//2.Додати 2
+	//3.Додати 3
+	//4.Відняти 2
+	//5.Відняти 3.
+	//6.Вивести суму
+	//7.Вихід.
+//Шляхом поступового вибору відповідних пунктів спробувати отримати число N, яке вводиться з клавіатури.
+
+var chuslo = parseInt(prompt('Введіть число: '))
+var sum8
+do {
+    var sum9=parseInt(prompt('1.Ініціалізація (сума=0); 2.Додати 2; 3.Додати 3; 4.Відняти 2; 5.Відняти 3; 6.Вивести суму; 7.Вихід.'))
+    switch (sum9) {
+        case 1: sum8=0
+            
+            break;
+            case 2: sum8=sum8+2
+            
+            break;
+            case 3: sum8=sum8+3
+            
+            break;
+            case 4: sum8=sum8-2
+            
+            break;
+            case 5: sum8=sum8-3
+            
+            break;
+            case 6: document.write(sum8+'; Початкове число :'+chuslo)
+            
+            break;
+    
+        default:
+            break;
+    }
+} while (sum9!=7);
+    </script>
+    <hr>
+    <script>
+    //8. З клавіатури вводиться число. Знаходити суму цифр до тих пір. Поки сума не стане більшую за 20.
+    
+    var sum10=0;
+while(sum10<20)
+{
+    var num7=parseInt(prompt('Введіть число: '))
+ sum10=sum10+num7
+}
+    </script>
+    <hr>
+    <script>
+    //З клавіатури вводиться пароль (правильний пароль- 78). Поки пароль не вірний дати можливість користувачу повторно ввести його. 
+    
+    do {
+        var pass=parseInt(prompt('Введіть пароль: '))
+    } while (pass!=78);
+    
+    </script>
+    <hr>
+    <script>
+    //З клавіатури вводиться вартість одиниці товару. Поки користувач не введе суму грошей, яка достатня для купівлі товару або не відмовиться від купівлі давати можливість вводити суму грошей.
+    
+    var price1 = parseInt(prompt('Введіть вартість товару: '))
+    do {
+       var sum11=parseInt(prompt('Введіть суму грошей (щоб вийти натисніть 0): '))
+    } while (sum11<=price1 && sum11!=0);
+    
+    </script>
+    <hr>
+    <script>
+    // Комп’ютер загадує випадкове число від 1 до 10. Вгадати число шляхом введеня можливих варіантів. В кінці вивести кількість спроб користувача. 
+    
+    var num8 = 1 + Math.floor(Math.random() * 10)
+    var count1 = 0
+    do {
+    
+        var try1 = parseInt(prompt('Введіть число: '))
+        count1++
+    } while (try1!=num8);
+    document.write('Ви ввели правильне число, спроб: '+count1)
+    
+    </script>
+    <hr>
+    <script>
+    //Комп’ютер загадує два випадкових числа від 1 до 10. Вгадати обидва числа шляхом введеня можливих варіантів. В кінці вивести кількість спроб користувача.
+    
+    var num9 = 1 + Math.floor(Math.random() * 10)
+    var num10 = 1 + Math.floor(Math.random() * 10)
+    var count1 = 0
+    do {
+        var try2 = parseInt(prompt('Введіть число: '))
+        count1++
+        if (try2==num9 || try2==num10) {
+            alert("Ви вгадали одне число, вгадуйте друге.")
+        }
+        
+    } while (try2!=num9 && try2!=num10);
+    document.write('Ви ввели правильні числа, спроб: '+count1)
+    </script>
+    <hr>
+<script>
+//12. З клавіатури вводяться поступово числа. Знайти два найбільші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5.
+
+var chuslo1
+while ( chuslo1!=0)
+ {
+      chuslo1=parseInt(prompt('Введіть перше число: '))
+    var chuslo2=parseInt(prompt('Bведіть друге число: '))
+    var chuslo11=Math.max(chuslo1,chuslo2)
+} 
+
+
+document.write(chuslo11+'; ')
+</script>
+<hr>
+<script>
+    //14. Виводити на екран біжучий рядок поки не буде натиснуто на деяку клавішу.
+  
+   do  {
+        document.write(`
+<title>Біжучий рядок</title>
+<marquee behavior="alternate" direction="right">Бегущая строка</marquee>
+`)
+var r = prompt('')
+    }
+    while (r!=null) 
+</script>
+<hr>
+<script>
+//Морський бій. Комп’ютер випадковим чином розміщує одиночний корамель на полі 5*5. З клавіатури поступово вводяться координати пострілу поки корабель не буде потоплено. Спробуйте відоразити гру графічно.
+
+document.write(`<table border="2px" >`);
+    var nam=1;
+    for (let i = 0; i < 5; i++) {
+        document.write(`<tr>`);
+        for (let j = 0; j <5; j++) {
+            document.write("<td>",nam+j,"</td>");
+            
+        }
+        document.write(`</tr>`);
+        nam=nam+5
+    }
+    var ship = 1 + Math.floor(Math.random() * 25)
+    do {
+        var try3=parseInt(prompt('Введіть номер клітинки (всього-25; в кожному рядку по 5; нумерація починається і продовжується з лівої сторони кожного рядка):'))
+    } while (try3!=ship);
+    document.write('Ви влучили в корабель!')
+</script>
+<hr>
+<script>
+//Тир. На полі з 10 клітинок розміщують зайця. За один крок заєць може стрибати на відстань від 0 до 3 позицій у будь-якому напрямку. З клавіатури вводиться позиція пострілу. Гра продовжується поки  у користувача не закінчаться патрони (кількість вводиться з клавіатури) або не буде влучання. Спробуйте відоразити гру графічно.
+
+var gunshots = parseInt(prompt('Введіть кількість патронів: '))
+var rabbit = 1 + Math.floor(Math.random() * 10)
+do {
+    var gunshot = parseInt(prompt('Введіть позицію пострілу: '))
+    var rabbitnew = rabbit + Math.floor(Math.random() * 3)
+    rabbit=rabbitnew
+gunshots--
+} while (gunshot!=rabbit && gunshots>0);
+if (gunshot==rabbit) 
+document.write('Ви перемогли!')
+else 
+document.write('Ви зазнали поразки.')
+
+</script>
+<hr>
+<script>
+//Танчики. На полі з 10 клітинок розміщують танк. За один крок танк може переміщуватися на відстань від 0 до 1 у  будь-якому напрямку (в межах поля). При влучанні броня танка пошкоджується на 30 балів (всього 100). Гра продовжується поки або не закінчаться снаряди (кількість вводиться з клавіатури) або не буде влучання. Спробуйте відоразити гру графічно.
+
+var gunshots1 = parseInt(prompt('Введіть кількість патронів: '))
+var tank = 1 + Math.floor(Math.random() * 10)
+var baly = 100
+do {
+    var gunshot1 = parseInt(prompt('Введіть позицію пострілу: '))
+    var tanknew = tank + Math.floor(Math.random() * 1)
+    tank=tanknew
+gunshots1--
+if (gunshot1==tank)
+baly=baly-30
+} while (baly>0 && gunshots1>0);
+if (gunshot1==tank) 
+document.write('Ви перемогли!')
+else 
+document.write('Ви зазнали поразки.')
+
+</script>
+<hr>
+<script>
+//1.	Знайти перше від’ємне значення послідовності cos(lg(p)), p=2, 3, 4,…
+
+var p=2
+
+ do{
+  var yu= Math.cos(Math.log10(p))
+   p++
+}
+while (yu>0)
+document.write(yu)
+</script>
+<hr>
+<script>
+//Знайти серед послідовності чисел 1+1/2, 1+1/3,… перше число, яке менше заданого числа А.
+
+var qq=2
+var ee = prompt('A=:')
+var ww
+do {
+    ww = 1+1/qq
+    qq++
+}
+while (ww>ee)
+document.write(ww)
+</script>
+<hr>
+<script>
+//4.	Знайти середнє арифметичне чисел, значення яких вводяться з клавіатури. Введення закінчується після введеня 0.
+
+var sum12 = 0
+var counting=0
+        do {
+            counting++
+            var num12 = parseInt(prompt('Введіть число:'))
+            sum12 = sum12 + num12
+            
+        } while (num12 != 0);
+        document.write(sum12/(counting-1))
+
+</script>
+<hr>
+<script>
+//5.	Знайти середнє арифметичне чисел, значення яких вводяться з клавіатури. Введення закінчується після того, як сума стане більшою за число B .
+
+var sum122 = 0
+var countingg=0
+var b=parseInt(prompt('Введіть число В'))
+        do {
+            countingg++
+            var num122 = parseInt(prompt('Введіть число:'))
+            sum122 = sum122 + num122
+            
+        } while (sum122<=b);
+        document.write(sum122/(countingg))
+</script>
+<hr>
+<script>
+//7.	Написати програму виведення на екран таблиці значень функцій sin(x), cos(x) і tg(x) на відрізку [–2,2 ] з кроком /4.
+
+var y1
+var y2
+var y3
+var x=-2
+var y11=Math.sin(x)
+   var y22=Math.cos(x)
+    var y33=Math.tan(x)
+    document.write('; sin='+y11+'; cos= '+y22+'; tg= '+y33)
+do {
+    y1=Math.sin(x/4)
+    y2=Math.cos(x/4)
+    y3=Math.tan(x/4)
+    document.write('; sin='+y1+'; cos= '+y2+'; tg= '+y3)
+    x++
+
+} while (x!=3);
+
+</script>
+<hr>
+<script>
+//	Написати програму обчислення цілої частки та остачі від ділення цілого числа X на ціле число Y, не використовуючи при цьому відповідних стандартних функцій.
+
+var t=parseInt(prompt('Введіть перше число: '))
+var t1=parseInt(prompt('Введіть друге число: '))
+var t2=0
+do {
+    var t22=t1*t2
+    t2++
+var t3=t2-2
+var t33=t-t3*t1
+} while (t22<=t);
+document.write('Ціла частка: '+t3+'; Остача: '+t33)
+
+</script>
+<hr>
+<script>
+//Дану послідовність символів записати у зворотному порядку.
+
+var name = prompt('').split('');
+var reversed = "";
+    for (var i=name.length-1; i>=0; i--) {
+        reversed  += name.charAt(i);
+    }
+    document.write(reversed)
+</script>
+
+<hr>
+<script>
+//Знайти перші n простих чисел.
+
+var nch=0
+var nch1=parseInt(prompt("Введіть кількість простих чисел(від 4 і більше): "))
+var tre=5
+document.write('2; 3; 5; 7; ')
+do {
+    nch++
+    if (nch!=1 && nch%2!=0 && nch%3!=0 &&nch%7!=0 &&nch%5!=0) {
+    document.write(nch+'; ')
+    tre++
+    
+    }
+    else
+    document.write('')
+} while (tre<=nch1);
+
+</script>
+<hr>
+<script>
+//	Написати програму обчислення та виведення таблиці значень функції z= , якщо відрізок визначення та крок зміни значень аргументу вводяться з клавіатури, при n=1,2,3…(x 1). Обчислення припинити, як тільки порушиться умова z>A.
+
+var n=1
+var z
+var x
+var st = parseInt(prompt("Введіть початок відрізка (x<=1): "))
+var lim = parseInt(prompt("Введіть кінець відрізка (x<=1): "))
+var krok = parseInt(prompt("Введіть крок зміни: "))
+var x=st
+document.write('Значення: ')
+do {
+    z=x/n
+    document.write(z+'; ')
+    x=x+krok
+    n++
+} while (x<=lim);
+
+</script>
+
+</body>
+
+</html>
