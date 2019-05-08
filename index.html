@@ -1,338 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
+    <script>
+    //Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+    //====== Функція для визначення пори року ======
+    function getSeason(month) {
+        switch (month) {
+            case 1: 
+            case 12:
+            case 2: return 'Зима'
+            case 3: 
+            case 4:
+            case 5: return 'Весна'
+            case 6: 
+            case 7:
+            case 8: return 'Літо'
+            case 10: 
+            case 11:
+            case 9: return 'Осінь'
+            
+            default: return 'error'
+        }
+    }
+    //====== Використання функції ======
+   var usermonth = parseInt(prompt('Введіть місяць'))
+   var season = getSeason(usermonth)
+    document.write(season)
     
-    <script>
-        //1
-        let ScreenWidth = ("44.28");
-        let Objects = ("29");
-        let ObjectWidth = (ScreenWidth / Objects);
-        document.write("ширина елементів, які повинні бути відображені у рядку=" + ObjectWidth + " см");
     </script>
     <hr>
     <script>
-        //2
-        let salary = prompt("Ваша заробітня плата:");
-        let minimum = prompt("Введіть розмір прожиткового мінімумa:");
-        let socialHelp = (minimum - salary);
-        document.write("Розмір соціальної допомоги: " + socialHelp + " грн");
-    </script>
-    <hr>
-    <script>
-        //3
-        let goods1 = prompt('кількість пачок рису: ');
-        let goods1price = prompt('ціна пачки рису: ');
-        let goods2 = prompt('кількість банок огірків: ');
-        let goods2price = prompt('ціна банки огірків: ');
-        let goods1total = goods1 * goods1price;
-        let goods2total = goods2 * goods2price;
-        let goodstotal = goods1total + goods2total;
-        document.write("Ціна пачок рису: " + goods1total + "грн; ");
-        document.write("Ціна банок огірків: " + goods2total + "грн; ");
-        document.write("Загальна сума: " + goodstotal + "грн.")
+    // Створити функцію, яка за номером місяця повертає його назву.
+    //====== Функція для визначення назви місяця ======
+    function getMonthname(monthname) {
+        switch (monthname) {
+            case 1: return 'Січень'
+            case 2: return 'Лютий'
+            case 3: return 'Березень'
+            case 4: return 'Квітень'
+            case 5: return 'Травень'
+            case 6: return 'Червень'
+            case 7: return 'Липень'
+            case 8: return 'Серпень'
+            case 9: return 'Вересень'
+            case 10: return 'Жовтень'
+            case 11: return 'Листопад'
+            case 12: return 'Грудень'
+            default: return 'error'
 
+        }
+    }
+    //====== Використання функції ======
+    var userMonth = parseInt(prompt('Введіть номер місяця: '))
+    var nameofthemonth = getMonthname(userMonth) 
+    document.write(nameofthemonth)
     </script>
     <hr>
     <script>
-        //4
-        let age = parseFloat(prompt("Вік дитини: "));
-        let kindergarten = (3 - age);
-        let schoolb = (6 - age);
-        let schoole = (17 - age);
-        let unib = (17 - age);
-        let unie = (21 - age);
-        document.write('Дитина піде у садочок через ' + kindergarten + " років; ");
-        document.write('Дитина піде у школу через ' + schoolb + " років; ");
-        document.write('Дитина закінчить школу через ' + schoole + " років; ");
-        document.write('Дитина піде до університету через ' + unib + " років; ");
-        document.write('Дитина піде закінчить університет через ' + unie + " років.");
+    //Створити функцію, яка за номером дня тижня повертає кількість уроків(так, як у вас було у школі).
+    //====== Функція для визначення скільки уроків було кожного дня ======
+    function getTheNumberOflessons(lessons) {
+        switch (lessons) {
+            case 1: 
+            case 3: 
+            case 4: return '7'
+            case 2: 
+            case 5: return '6'
+            case 6: 
+            case 7: return 'Вихідний'
+            default: return 'error'
+        }
+    }
+    //====== Використання функції ======
+    var userDayOfTheWeek = parseInt(prompt('Введіть номер дня тижня(1-понеділок)'))
+    var howManyLessons = getTheNumberOflessons(userDayOfTheWeek)
+    document.write(howManyLessons)
+    </script>
+    <hr>
+    <script>
+    //Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+//1)суму;
+//2)добуток;
+//3)середнє арифметичне;
+//4)мінімальне значення. 
+//====== Функція для визначення суми ======
+function getSum(numb1,numb2,numb3,numb4) {
+    return numb1+numb2+numb3+numb4
+}
+//====== Функція для визначення добутку ======
+    function getMultipl(numb1,numb2,numb3,numb4) {
+        return numb1*numb2*numb3*numb4
+    }
+    //====== Функція для визначення середнього арефметичного ======
+    function getAverage(numb1,numb2,numb3,numb4) {
+        return (numb1+numb2+numb3+numb4)/4
+    }
+    //====== Функція для визначення найменшого числа ======
+    function getMin(numb1,numb2,numb3,numb4,min) {
+        min=numb1
+        if (numb1>numb2)
+        {
+        min = numb2
+return numb2
+        }
+        else if (numb3<numb2) {
+min = numb3
+return numb3
+    }
+   else if  (numb4<numb3) {
+min = numb4
+return numb4
+    }
+    else 
+    return numb1
+    }
+    
+    function dodo(numb) {
+        numb = parseInt(prompt('Введіть число:'))
+        return numb
+    }
+  
+   //====== Вводимо числа ======
+   var numb1=parseInt(prompt('Введіть перше число'))
+   var numb2=parseInt(prompt('Введіть друге число'))
+   var numb3=parseInt(prompt('Введіть третє число'))
+   var numb4=parseInt(prompt('Введіть четверте число'))
+   //====== Використання функцій ======
+   var sum = getSum(numb1,numb2,numb3,numb4)
+   var mult = getMultipl(numb1,numb2,numb3,numb4)
+   var aver = getAverage(numb1,numb2,numb3,numb4)
+   var minim = getMin(numb1,numb2,numb3,numb4)
 
+   document.write(`Резултат множення: ${mult}, сума: ${sum}, середнє арифметичне: ${aver}, найменше число:${minim}`)
     </script>
     <hr>
     <script>
-        //5
-        let S = prompt("Скільки заробив сумісник: ")
-        let procents = (S / 100 * 20);
-        let factMoney = (S - procents);
-        document.write("Фактична платня сумісника: " + factMoney + " грн");
+    //Створити функцію, яка для 3 заданих чисел знаходить кількість парних.
+    //====== Функція для визначення скільки парних чисел вводиться ======
+    function getConjugate(numb1,numb2,numb3) {
+        if (numb1%2==0 && numb2%2==0 && numb3%2==0) 
+            return '3'
+        else if (numb1%2==0 &&numb2%2==0 || numb1%2==0 && numb3%2==0 || numb2%2==0 && numb3%2==0)
+        return '2'
+    
+    else if (numb1%2==0 || numb2%2==0 || numb3%2==0)
+    return '1'
+    else 
+    return '0'
+    }
+    //====== Вводимо числа ======
+    var number1=parseInt(prompt("Введіть перше число"))
+    var number2=parseInt(prompt("Введіть друге число"))
+    var number3=parseInt(prompt("Введіть третє число"))
+    //====== Використання функції ======
+    var parni = getConjugate(number1,number2,number3)
+    document.write(`Парних: ${parni}`)
     </script>
-    <hr>
-    <script>
-        //6
-        let a11 = prompt('Значення змінної a');
-        let b11 = prompt('Значення змінної b');
-        let c11 = prompt('Значення змінної c');
-        let a1 = b11;
-        let b1 = c11;
-        let c1 = a11;
-        document.write('Змінна а дорівнює: ' + a1 + '; ');
-        document.write('Змінна b дорівнює: ' + b1 + '; ');
-        document.write('Змінна c дорівнює: ' + c1 + '.');
 
-    </script>
-    <hr>
-    <script>
-        //7
-        let number = prompt('Деяке число: ');
-        let main = parseInt(number);
-        let fraction = (number - main);
-        document.write('Ціла частина числа:' + main + '; Дробова частина числа: ' + fraction + '.')
-    </script>
-    <hr>
-    <script>
-        //8
-        let year = prompt('Введіть рік: ');
-        let century;
-        if (1 < year < 101) {
-            century = "1";
+<hr>
+<script>
+//Створити функції, які переводять:
+//1)	Сантиметри у дюйми;
+//2)	Кілограми у фунти;
+//3)	Кілометри у милі.
+//====== Функція для переведення значення ======
+function whichMeasurement(measurement, bed) {
+    switch (measurement) {
+        case 'см': return bed/2.54+" дюймів"
+        case 'кг': return bed/2.205+" фунтів"
+        case 'км': return bed*0.62+" кілометрів"
+        default: return 'error'
+          
+    }
+}
+//====== Вводимо одиницю виміру ======
+var sm_kg_km = prompt('Введіть одиницю виміру (см,кг чи км)')
+//====== Вводимо числа ======
+var znachennia = parseFloat(prompt('Введіть значення:'))
+//====== Використання функції ======
+var res = whichMeasurement(sm_kg_km,znachennia)
+document.write(`${res}`)
+</script>
+<hr>
+<script>
+//Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців
+//====== Функція для таблиці ======
+function createTable(rows,cols) {
+    document.write(`<table>`)
+    for (let i = 0; i < rows; i++) {
+        
+    
+      document.write(`<tr>`)
+        for (let j = 0; j < cols; j++) {
+            document.write(`<td>`)
+    document.write(`</td>`)
         }
-        else if (100 < year < 201) {
-            century = "2"
-        }
-        else if (200 < year < 301) {
-            century = "3";
-        }
-        else if (300 < year < 401) {
-            century = "4";
-        }
-        else if (400 < year < 501) {
-            century = "5";
-        }
-        else if (500 < year < 601) {
-            century = "6";
-        }
-        else if (600 < year < 701) {
-            century = "7";
-        }
-        else if (700 < year < 801) {
-            century = "8";
-        }
-        else if (800 < year < 901) {
-            century = "9";
-        }
-        else if (900 < year < 1001) {
-            century = "10";
-        }
-        else if (1000 < year < 1101) {
-            century = "11";
-        }
-        else if (1100 < year < 1201) {
-            century = "12";
-        }
-        else if (1200 < year < 1301) {
-            century = "13";
-        }
-        else if (1300 < year < 1401) {
-            century = "14";
-        }
-        else if (1400 < year < 1501) {
-            century = "15";
-        }
-        else if (1500 < year < 1601) {
-            century = "16";
-        }
-        else if (1600 < year < 1701) {
-            century = "17";
-        }
-        else if (1700 < year < 1801) {
-            century = "18";
-        }
-        else if (1800 < year < 1901) {
-            century = "19";
-        }
-        else if (1900 < year < 2001) {
-            century = "20";
-        }
-        else {
-            century = "21";
-        }
-
-        document.write(century + ' століття.')
-    </script>
-    <hr>
-    <script>
-        //9
-        let seconds = prompt('Введіть кількість секунд: ');
-        let hours = parseInt(seconds / 3600);
-        let minutes = Math.round(seconds - hours * 3600) / 60;
-        document.write('Хвилин з доби пройшло: ' + minutes + '; Годин з доби пройшло: ' + hours + ' .');
-    </script>
-    <hr>
-    <script>
-        //10
-        let money = prompt('Введіть кількість монет: ');
-        let banknotes = Math.round(money / 100);
-        let coins = (money - banknotes * 100);
-
-
-        document.write('Кількість гривень: ' + banknotes + '; кількість копійок: ' + coins + '.')
-    </script>
-    <hr>
-    <script>
-        //11
-        let money1 = prompt('Введіть кількість монет, номіналом 5 копійок: ');
-        let money2 = prompt('Введіть кількість монет, номіналом 25 копійок: ');
-        let money3 = prompt('Введіть кількість монет, номіналом 50 копійок: ');
-        let money123 = (money1 * 5 + money2 * 25 + money3 * 50);
-        let banknotes1 = Math.round(money123 / 100);
-        let coins1 = (money123 - banknotes1 * 100);
-
-
-        document.write('Кількість гривень: ' + banknotes1 + '; кількість копійок: ' + coins1 + '.')
-    </script>
-    <hr>
-    <script>
-        //12
-        let days = prompt('Введіть кількість днів: ');
-        let week = parseInt(days / 7);
-        document.write('Кількість повних тижнів: ' + week + '.');
-    </script>
-    <hr>
-    <script>
-        //13
-        let dayz = parseInt(prompt('Введіть номер дня тижня: '));
-        let dayz1 = parseInt(prompt('Кількість днів, які пройшли: '));
-        let dayz2 = (dayz + dayz1);
-        //повних тижнів пройшло
-        let dayz3 = parseInt(dayz2 / 7);
-        let dayz4 = parseInt(dayz2 - dayz3 * 7);
-        if (dayz4 = 1) {
-            document.write("Понеділок");
-
-        } else if (dayz4 = 2) {
-            document.write("Вівторок")
-        } else if (dayz4 = 3) {
-            document.write("Середа")
-        } else if (dayz4 = 4) {
-            document.write("Четвер")
-        } else if (dayz4 = 5) {
-            document.write("П'ятниця")
-        } else if (dayz4 = 6) {
-            document.write("Субота")
-        }
-        else {
-            document.write("Неділя")
-        }
-
-
-
-    </script>
-    <hr>
-    <script>
-        //14
-        let months = prompt('Введіть кількість місяців: ');
-        let years = parseInt(months / 12);
-        let weeks = Math.round(months - years * 12);
-        document.write('Років пройшло: ' + years + '; Місяців пройшло: ' + weeks + ' .');
-    </script>
-    <hr>
-    <script>
-        //15
-     let month1 = parseInt(prompt('Введіть номер місяця: '));
-     
-        let month2 = parseInt(prompt('Кількість місяців, які пройшли: '));
-        let month3 = (month1 + month2);
-        let month4 = parseInt(month3 / 12);
-        let month5 = parseInt(month3 - month4 * 12);
-        if (month5 = 1) {
-            document.write("Січень");
-
-        } else if (month5 = 2) {
-            document.write("Лютий")
-        } else if (month5= 3) {
-            document.write("Березень")
-        } else if (month5 = 4) {
-            document.write("Квітень")
-        } else if (month5 = 5) {
-            document.write("Травень")
-        } else if (month5 = 6) {
-            document.write("Червень")
-        }else if (month5 = 7) {
-            document.write("Липень")
-        } else if (month5= 8) {
-            document.write("Серпень")
-        } else if (month5 = 9) {
-            document.write("Вересень")
-        } else if (month5 = 10) {
-            document.write("Жовтень")
-        } else if (month5 = 11) {
-            document.write("Листопад")
-        }
-        else {
-            document.write("Грудень")
-        }
-    </script>
-    <hr>
-    <script>
-        //16
-        //Зміщення на 4 символа
-    let zminna = prompt('Введіть символ (з англійського алфавіту, лише нижній регістр): ')
-    if (zminna = 'a') {
-        document.write('e')
-    } else if (zminna = 'b') {
-        document.write('f')
-    }else if (zminna = 'c') {
-        document.write('g')
-    }else if (zminna = 'd') {
-        document.write('h')
-    }else if (zminna = 'e') {
-        document.write('i')
-    }else if (zminna = 'f') {
-        document.write('j')
-    }else if (zminna = 'g') {
-        document.write('k')
-    }else if (zminna = 'h') {
-        document.write('l')
-    }else if (zminna = 'i') {
-        document.write('m')
-    }else if (zminna = 'j') {
-        document.write('n')
-    }else if (zminna = 'k') {
-        document.write('o')
-    }else if (zminna = 'l') {
-        document.write('p')
-    }else if (zminna = 'm') {
-        document.write('q')
-    }else if (zminna = 'n') {
-        document.write('r')
-    }else if (zminna = 'o') {
-        document.write('s')
-    }else if (zminna = 'p') {
-        document.write('t')
-    }else if (zminna = 'q') {
-        document.write('u')
-    }else if (zminna = 'r') {
-        document.write('v')
-    }else if (zminna = 's') {
-        document.write('w')
-    }else if (zminna = 't') {
-        document.write('x')
-    }else if (zminna = 'u') {
-        document.write('y')
-    }else if (zminna = 'v') {
-        document.write('z')
-    }else if (zminna = 'w') {
-        document.write('a')
-    }else if (zminna = 'x') {
-        document.write('b')
-    }else if (zminna = 'y') {
-        document.write('c')
-    }else if (zminna = 'z') {
-        document.write('d')
-    }else {
-        document.write('Даний символ не відповідає умові.')
+      document.write(`</tr>`)
+    }
+      document.write(`</table>`)
     }
 
-
-    </script>
+    //====== Вводимо кількість рядків і стовпців ======
+var rowcount = parseInt(prompt('Введіть кількість рядків:'))
+var columncount = parseInt(prompt('Введіть кількість стовпців:'))
+//====== Використання функції ======
+createTable(rowcount,columncount)
+</script>
+<style>
+table{
+    border: 2px solid black
+}
+</style>
+<hr>
+<script>
+//Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію)
+//====== Функція для рандомного зображення ======
+function getRandomImage(images,image1,image2,image3,image4) {
+    images= 1 + Math.floor(Math.random() * 4 )
+    switch (images) {
+        case 1: document.write(image1)
+        break;
+           case 2: document.write(image2)
+           break;
+        case 3:document.write(image3)
+        break;
+case 4: document.write(image4)
+break;
+            default: return 'error'
+    }
+}
+//====== Вводимо змінні з посиланнями на зображення ======
+var images
+var image1="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwj4ocSSlIriAhWH16YKHdX0CO8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.digitaltrends.com%2Fcars%2F2019-bmw-m2-competition%2F&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'> </a>"
+var image2="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwi85qbblIriAhVQJZoKHb2IB5YQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.drive.ru%252Fbrands%252Fbmw%26psig%3DAOvVaw3XGXkxVbtMdeInF0UoLFFQ%26ust%3D1557343865683634&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
+var image3="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjupNnflIriAhVRK5oKHQ_nCpcQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.carmagazine.co.uk%252Fcar-news%252Fbmw%252Fbmw-vs-winter-all-you-need-to-know-about-bmw-xdrive%252F%26psig%3DAOvVaw3XGXkxVbtMdeInF0UoLFFQ%26ust%3D1557343865683634&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
+var image4="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiN_aLmlIriAhXFyKYKHWC1D_sQjRx6BAgBEAU&url=https%3A%2F%2Fwww.wired.com%2Fstory%2Fbmw-vision-inext-suv-concept-new-electric-course%2F&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
+//====== Використання функції ======
+getRandomImage(images,image1,image2,image3,image4)
+</script>
 </body>
-
 </html>
