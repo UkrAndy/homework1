@@ -8,241 +8,106 @@
 </head>
 <body>
     <script>
-    //Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
-    //====== Функція для визначення пори року ======
-    function getSeason(month) {
-        switch (month) {
-            case 1: 
-            case 12:
-            case 2: return 'Зима'
-            case 3: 
-            case 4:
-            case 5: return 'Весна'
-            case 6: 
-            case 7:
-            case 8: return 'Літо'
-            case 10: 
-            case 11:
-            case 9: return 'Осінь'
-            
-            default: return 'error'
-        }
-    }
-    //====== Використання функції ======
-   var usermonth = parseInt(prompt('Введіть місяць'))
-   var season = getSeason(usermonth)
-    document.write(season)
+   //Дано оцінки учня за 5 предметів у 12 бальній шкалі.  Вивести номери предметів, з яких у учня трійки?
+   document.write('Учень має оцінку "3" (по 12-ти бальній шкалі "6" або "7") з предметів №')
+   function getGrade(grade) {
+       var lesson = 0
+       for (let i = 0; i < 5; i++) {
+        lesson++
+           grade=parseInt(prompt(`Введіть оцінку за ${lesson} предмет`))
+           if (grade==7 || grade==6)
+           document.write(`${lesson}; `)
+    
+       }
+   }
+var grade = getGrade()
+    </script>
+    <hr>
+
+    <script>
+        //Користувач вводить 10 слів. Підрахувати кількість слів, у яких перша літера і остання літера однакові.
+    function getWordsCount(e) {
+           let f = e.length
+           if (e.charAt(0) == e.charAt(f-1))
+               return true
+           }
+
+           var count = 1
+           for (let i = 0; i < 10; i++) {
+               e=prompt(`Введіть слово`)
+               var res = getWordsCount(e)
+               if (res == true)
+               count++
+           }
+           document.write(`Перша і остання літера співпадають у ${count} слів`)
     
     </script>
     <hr>
     <script>
-    // Створити функцію, яка за номером місяця повертає його назву.
-    //====== Функція для визначення назви місяця ======
-    function getMonthname(monthname) {
-        switch (monthname) {
-            case 1: return 'Січень'
-            case 2: return 'Лютий'
-            case 3: return 'Березень'
-            case 4: return 'Квітень'
-            case 5: return 'Травень'
-            case 6: return 'Червень'
-            case 7: return 'Липень'
-            case 8: return 'Серпень'
-            case 9: return 'Вересень'
-            case 10: return 'Жовтень'
-            case 11: return 'Листопад'
-            case 12: return 'Грудень'
-            default: return 'error'
-
-        }
+    //Дано послідовність чисел, які згенеровано випадковим чином. Сформувати новий масив, у якому елементи є більшими за перший елемент.
+    function getRandomNumbers(number1,number2,number3,number4,number5) {
+        document.write('Початкова послідовність чисел: ')
+        number1 = 1+Math.floor(Math.random()*100)
+        number2 = 1+Math.floor(Math.random()*100)
+        number3 = 1+Math.floor(Math.random()*100)
+        number4 = 1+Math.floor(Math.random()*100)
+        document.write(`${number1};${number2};${number3};${number4} `)
+        document.write('<br>')
+        document.write('Послідовність чисел, більших за перше число попередньої послідовності: ')
+        for (let i = 0; i < 4; i++) {
+    number5 = number1+Math.floor(Math.random()*100)
+    document.write(`${number5};`)
+   }
     }
-    //====== Використання функції ======
-    var userMonth = parseInt(prompt('Введіть номер місяця: '))
-    var nameofthemonth = getMonthname(userMonth) 
-    document.write(nameofthemonth)
+    var number1
+    var number2
+    var number3
+    var number4
+    var number5
+    getRandomNumbers(number1,number2,number3,number4,number5)
+   
     </script>
     <hr>
     <script>
-    //Створити функцію, яка за номером дня тижня повертає кількість уроків(так, як у вас було у школі).
-    //====== Функція для визначення скільки уроків було кожного дня ======
-    function getTheNumberOflessons(lessons) {
-        switch (lessons) {
-            case 1: 
-            case 3: 
-            case 4: return '7'
-            case 2: 
-            case 5: return '6'
-            case 6: 
-            case 7: return 'Вихідний'
-            default: return 'error'
-        }
+    //Усі елементи введеного масиву помножити на 17. 
+    function getNumbers(nmb1,nmb2,nmb3,nmb4) {
+        nmb1=parseFloat(prompt('Введіть перше число'))*17
+        nmb2=parseFloat(prompt("Введіть друге число"))*17
+        nmb3=parseFloat(prompt('Введіть третє число'))*17
+        nmb4=parseFloat(prompt('Введіть четверте число'))*17
+        document.write(`${nmb1};${nmb2};${nmb3};${nmb4}`)
     }
-    //====== Використання функції ======
-    var userDayOfTheWeek = parseInt(prompt('Введіть номер дня тижня(1-понеділок)'))
-    var howManyLessons = getTheNumberOflessons(userDayOfTheWeek)
-    document.write(howManyLessons)
+    var nmb1
+    var nmb2
+    var nmb3
+    var nmb4
+    getNumbers(nmb1,nmb2,nmb3,nmb4)
+    
     </script>
     <hr>
     <script>
-    //Задача 3. Створити окремі функції, які для 4 чисел знаходять:
-//1)суму;
-//2)добуток;
-//3)середнє арифметичне;
-//4)мінімальне значення. 
-//====== Функція для визначення суми ======
-function getSum(numb1,numb2,numb3,numb4) {
-    return numb1+numb2+numb3+numb4
-}
-//====== Функція для визначення добутку ======
-    function getMultipl(numb1,numb2,numb3,numb4) {
-        return numb1*numb2*numb3*numb4
+    //Знайти суму елементів, які знаходяться після елемента зі значенням 78.
+    function getSum(a,b,c,d) {
+        a=parseFloat(prompt('Введіть перше число (всі числа після введення числа 78 будуть сумуватись)'))
+        b=parseFloat(prompt("Введіть друге число (всі числа після введення числа 78 будуть сумуватись)"))
+        c=parseFloat(prompt('Введіть третє число (всі числа після введення числа 78 будуть сумуватись)'))
+        d=parseFloat(prompt('Введіть четверте число (всі числа після введення числа 78 будуть сумуватись)'))
+        if (a==78)
+        return b+c+d
+        else if(b==78)
+        return c+d
+        else if(c==78)
+        return d
+        else 
+        return '0'
     }
-    //====== Функція для визначення середнього арефметичного ======
-    function getAverage(numb1,numb2,numb3,numb4) {
-        return (numb1+numb2+numb3+numb4)/4
-    }
-    //====== Функція для визначення найменшого числа ======
-    function getMin(numb1,numb2,numb3,numb4,min) {
-        min=numb1
-        if (numb1>numb2)
-        {
-        min = numb2
-return numb2
-        }
-        else if (numb3<numb2) {
-min = numb3
-return numb3
-    }
-   else if  (numb4<numb3) {
-min = numb4
-return numb4
-    }
-    else 
-    return numb1
-    }
-    
-    function dodo(numb) {
-        numb = parseInt(prompt('Введіть число:'))
-        return numb
-    }
-  
-   //====== Вводимо числа ======
-   var numb1=parseInt(prompt('Введіть перше число'))
-   var numb2=parseInt(prompt('Введіть друге число'))
-   var numb3=parseInt(prompt('Введіть третє число'))
-   var numb4=parseInt(prompt('Введіть четверте число'))
-   //====== Використання функцій ======
-   var sum = getSum(numb1,numb2,numb3,numb4)
-   var mult = getMultipl(numb1,numb2,numb3,numb4)
-   var aver = getAverage(numb1,numb2,numb3,numb4)
-   var minim = getMin(numb1,numb2,numb3,numb4)
-
-   document.write(`Резултат множення: ${mult}, сума: ${sum}, середнє арифметичне: ${aver}, найменше число:${minim}`)
+    var a
+    var b
+    var c
+    var d
+    var sum = getSum(a,b,c,d)
+    document.write(`Сума: ${sum}`)
     </script>
-    <hr>
-    <script>
-    //Створити функцію, яка для 3 заданих чисел знаходить кількість парних.
-    //====== Функція для визначення скільки парних чисел вводиться ======
-    function getConjugate(numb1,numb2,numb3) {
-        if (numb1%2==0 && numb2%2==0 && numb3%2==0) 
-            return '3'
-        else if (numb1%2==0 &&numb2%2==0 || numb1%2==0 && numb3%2==0 || numb2%2==0 && numb3%2==0)
-        return '2'
     
-    else if (numb1%2==0 || numb2%2==0 || numb3%2==0)
-    return '1'
-    else 
-    return '0'
-    }
-    //====== Вводимо числа ======
-    var number1=parseInt(prompt("Введіть перше число"))
-    var number2=parseInt(prompt("Введіть друге число"))
-    var number3=parseInt(prompt("Введіть третє число"))
-    //====== Використання функції ======
-    var parni = getConjugate(number1,number2,number3)
-    document.write(`Парних: ${parni}`)
-    </script>
-
-<hr>
-<script>
-//Створити функції, які переводять:
-//1)	Сантиметри у дюйми;
-//2)	Кілограми у фунти;
-//3)	Кілометри у милі.
-//====== Функція для переведення значення ======
-function whichMeasurement(measurement, bed) {
-    switch (measurement) {
-        case 'см': return bed/2.54+" дюймів"
-        case 'кг': return bed/2.205+" фунтів"
-        case 'км': return bed*0.62+" кілометрів"
-        default: return 'error'
-          
-    }
-}
-//====== Вводимо одиницю виміру ======
-var sm_kg_km = prompt('Введіть одиницю виміру (см,кг чи км)')
-//====== Вводимо числа ======
-var znachennia = parseFloat(prompt('Введіть значення:'))
-//====== Використання функції ======
-var res = whichMeasurement(sm_kg_km,znachennia)
-document.write(`${res}`)
-</script>
-<hr>
-<script>
-//Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців
-//====== Функція для таблиці ======
-function createTable(rows,cols) {
-    document.write(`<table>`)
-    for (let i = 0; i < rows; i++) {
-        
-    
-      document.write(`<tr>`)
-        for (let j = 0; j < cols; j++) {
-            document.write(`<td>`)
-    document.write(`</td>`)
-        }
-      document.write(`</tr>`)
-    }
-      document.write(`</table>`)
-    }
-
-    //====== Вводимо кількість рядків і стовпців ======
-var rowcount = parseInt(prompt('Введіть кількість рядків:'))
-var columncount = parseInt(prompt('Введіть кількість стовпців:'))
-//====== Використання функції ======
-createTable(rowcount,columncount)
-</script>
-<style>
-table{
-    border: 2px solid black
-}
-</style>
-<hr>
-<script>
-//Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію)
-//====== Функція для рандомного зображення ======
-function getRandomImage(images,image1,image2,image3,image4) {
-    images= 1 + Math.floor(Math.random() * 4 )
-    switch (images) {
-        case 1: document.write(image1)
-        break;
-           case 2: document.write(image2)
-           break;
-        case 3:document.write(image3)
-        break;
-case 4: document.write(image4)
-break;
-            default: return 'error'
-    }
-}
-//====== Вводимо змінні з посиланнями на зображення ======
-var images
-var image1="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwj4ocSSlIriAhWH16YKHdX0CO8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.digitaltrends.com%2Fcars%2F2019-bmw-m2-competition%2F&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'> </a>"
-var image2="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwi85qbblIriAhVQJZoKHb2IB5YQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.drive.ru%252Fbrands%252Fbmw%26psig%3DAOvVaw3XGXkxVbtMdeInF0UoLFFQ%26ust%3D1557343865683634&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
-var image3="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjupNnflIriAhVRK5oKHQ_nCpcQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.carmagazine.co.uk%252Fcar-news%252Fbmw%252Fbmw-vs-winter-all-you-need-to-know-about-bmw-xdrive%252F%26psig%3DAOvVaw3XGXkxVbtMdeInF0UoLFFQ%26ust%3D1557343865683634&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
-var image4="<a> <img src='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiN_aLmlIriAhXFyKYKHWC1D_sQjRx6BAgBEAU&url=https%3A%2F%2Fwww.wired.com%2Fstory%2Fbmw-vision-inext-suv-concept-new-electric-course%2F&psig=AOvVaw3XGXkxVbtMdeInF0UoLFFQ&ust=1557343865683634'></a>"
-//====== Використання функції ======
-getRandomImage(images,image1,image2,image3,image4)
-</script>
 </body>
 </html>
