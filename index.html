@@ -11,7 +11,7 @@
    //Дано оцінки учня за 5 предметів у 12 бальній шкалі.  Вивести номери предметів, з яких у учня трійки?
    document.write('Учень має оцінку "3" (по 12-ти бальній шкалі "6" або "7") з предметів №')
    function getGrade(grade) {
-       var lesson = 0
+       var lesson = 0     Зверніть увагу на те, змінні "і" та "lesson" мають начення, які змінюються синхронно
        for (let i = 0; i < 5; i++) {
         lesson++
            grade=parseInt(prompt(`Введіть оцінку за ${lesson} предмет`))
@@ -20,6 +20,17 @@
     
        }
    }
+       ------------------------ Тому можна було записати так (без додаткової змінної)------
+     function getGrade(grade) {
+    
+       for (let i = 0; i < 5; i++) {
+           grade=parseInt(prompt(`Введіть оцінку за ${i+1} предмет`))
+           if (grade==7 || grade==6)
+           document.write(`${i+1}; `)
+    
+       }
+   }    
+        
 var grade = getGrade()
     </script>
     <hr>
@@ -35,8 +46,8 @@ var grade = getGrade()
            var count = 1
            for (let i = 0; i < 10; i++) {
                e=prompt(`Введіть слово`)
-               var res = getWordsCount(e)
-               if (res == true)
+               
+               if (res ==  getWordsCount(e))
                count++
            }
            document.write(`Перша і остання літера співпадають у ${count} слів`)
